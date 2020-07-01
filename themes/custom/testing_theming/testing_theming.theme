@@ -1,0 +1,9 @@
+<?php
+
+// " & " don't need to return anything
+
+function testing_theming_preprocess_node(&$variables) {
+    $variables['content']['field_image']['#prefix'] = '<h3>prefix to a nice image</h3>';
+    $variables['content']['test_field'] = array('#type' => 'markup', '#markup' => '<h3>Hello from our render array</h3>');
+    // kint($variables);
+}
